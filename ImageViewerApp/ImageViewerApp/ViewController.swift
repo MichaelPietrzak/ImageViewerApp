@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
     var pictures = [String]()
     
     override func viewDidLoad() {
@@ -25,4 +25,3 @@ class ViewController: UIViewController {
         print(pictures)
     }
 }
-
