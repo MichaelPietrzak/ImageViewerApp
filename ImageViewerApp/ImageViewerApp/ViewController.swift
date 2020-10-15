@@ -26,6 +26,12 @@ class ViewController: UITableViewController {
         }
         print(pictures)
         
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor.red
+        
+        // Register xib with the name of xib file 
+        tableView.register(UINib(nibName: "PictureTableViewCell", bundle: nil), forCellReuseIdentifier: "PictureTableViewCell")
+        
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -34,8 +40,17 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
-        cell.textLabel?.text = pictures[indexPath.row]
+        
+        // Reuse or create a cell of the appropriate type.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PictureTableViewCell", for: indexPath) as! PictureTableViewCell
+        
+        // Fetch the data for the row.
+        let pictureName = pictures[indexPath.row]
+        
+        // Configure the cell’s contents with data from the fetched object.
+        cell.pictureLabel?.text = pictureName
+        cell.selectionStyle = .none
+    
         return cell
     }
     
@@ -45,5 +60,6 @@ class ViewController: UITableViewController {
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
+    
 }
 

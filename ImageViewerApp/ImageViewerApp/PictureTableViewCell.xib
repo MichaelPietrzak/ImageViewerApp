@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PictureTableViewCell" customModule="ImageViewerApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wos-vL-tva">
+                        <rect key="frame" x="30" y="15" width="260" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO3-Hk-D8B">
+                                <rect key="frame" x="40" y="32" width="154" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="8LP-ce-RmU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forwardArrow" translatesAutoresizingMaskIntoConstraints="NO" id="fv2-vw-UyP">
+                                <rect key="frame" x="244" y="46" width="24" height="28"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fv2-vw-UyP" secondAttribute="bottom" constant="46" id="C5L-ot-mfA"/>
+                            <constraint firstAttribute="bottom" secondItem="kO3-Hk-D8B" secondAttribute="bottom" constant="40" id="Fta-KH-eBD"/>
+                            <constraint firstAttribute="trailing" secondItem="fv2-vw-UyP" secondAttribute="trailing" constant="-8" id="TAk-zB-ZYQ"/>
+                            <constraint firstItem="fv2-vw-UyP" firstAttribute="top" secondItem="kO3-Hk-D8B" secondAttribute="top" constant="14" id="UqK-S8-1Oj"/>
+                            <constraint firstItem="kO3-Hk-D8B" firstAttribute="top" secondItem="wos-vL-tva" secondAttribute="top" constant="32" id="Xe8-sP-ox7"/>
+                            <constraint firstItem="fv2-vw-UyP" firstAttribute="leading" secondItem="kO3-Hk-D8B" secondAttribute="trailing" constant="50" id="gh9-YS-xJT"/>
+                            <constraint firstItem="kO3-Hk-D8B" firstAttribute="leading" secondItem="wos-vL-tva" secondAttribute="leading" constant="40" id="t44-Lv-Iae"/>
+                            <constraint firstItem="fv2-vw-UyP" firstAttribute="top" secondItem="wos-vL-tva" secondAttribute="top" constant="46" id="uWk-wk-nFY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="wos-vL-tva" secondAttribute="bottom" constant="15" id="47k-k8-aTd"/>
+                    <constraint firstItem="wos-vL-tva" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="ZFt-LS-QWh"/>
+                    <constraint firstAttribute="trailing" secondItem="wos-vL-tva" secondAttribute="trailing" constant="30" id="mtd-8c-oCs"/>
+                    <constraint firstItem="wos-vL-tva" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="ycK-k3-Z3c"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="pictureLabel" destination="kO3-Hk-D8B" id="qxa-rb-7UB"/>
+                <outlet property="view" destination="wos-vL-tva" id="EL0-R0-14A"/>
+            </connections>
+            <point key="canvasLocation" x="418.84057971014494" y="85.714285714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="forwardArrow" width="50" height="50"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
