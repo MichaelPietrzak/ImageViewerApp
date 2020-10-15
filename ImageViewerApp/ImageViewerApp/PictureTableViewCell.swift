@@ -8,11 +8,18 @@
 import UIKit
 
 class PictureTableViewCell: UITableViewCell {
-    @IBOutlet var pictureName: UILabel!
+    @IBOutlet var pictureLabel: UILabel!
+    @IBOutlet var view: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        let lightGrayColor = UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1.00)
+        
+        pictureLabel.font = UIFont(name: "Futura", size: 20)
+        
+        view.backgroundColor = lightGrayColor
+        view.layer.cornerRadius = 18
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -20,5 +27,4 @@ class PictureTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

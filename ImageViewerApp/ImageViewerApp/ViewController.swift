@@ -26,6 +26,9 @@ class ViewController: UITableViewController {
         }
         print(pictures)
         
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor.red
+        
         // Register xib with the name of xib file 
         tableView.register(UINib(nibName: "PictureTableViewCell", bundle: nil), forCellReuseIdentifier: "PictureTableViewCell")
         
@@ -42,19 +45,21 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PictureTableViewCell", for: indexPath) as! PictureTableViewCell
         
         // Fetch the data for the row.
-        let thePicture = pictures[indexPath.row]
+        let pictureName = pictures[indexPath.row]
         
         // Configure the cell’s contents with data from the fetched object.
-        cell.pictureName?.text = thePicture
+        cell.pictureLabel?.text = pictureName
+        cell.selectionStyle = .none
     
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let viewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
-//            viewController.selectedImage = pictures[indexPath.row]
-//            navigationController?.pushViewController(viewController, animated: true)
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            viewController.selectedImage = pictures[indexPath.row]
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+    
 }
 
