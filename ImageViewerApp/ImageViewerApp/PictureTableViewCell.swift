@@ -16,7 +16,8 @@ class PictureTableViewCell: UITableViewCell {
         
         let lightGrayColor = UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1.00)
         
-        pictureLabel.font = UIFont(name: "Futura", size: 20)
+        pictureLabel.font = UIFont(name: "Avenir Next", size: 20)
+        pictureLabel.textColor = UIColor(named: "textColor")
         
         view.backgroundColor = lightGrayColor
         view.layer.cornerRadius = 18
