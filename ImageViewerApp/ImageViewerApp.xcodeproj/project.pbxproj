@@ -24,6 +24,8 @@
 		4C854D9125353339003A71D5 /* nssl0033.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C854D8725353338003A71D5 /* nssl0033.jpg */; };
 		4C854D9225353339003A71D5 /* nssl0034.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C854D8825353338003A71D5 /* nssl0034.jpg */; };
 		4C854D952535E7C6003A71D5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C854D942535E7C6003A71D5 /* DetailViewController.swift */; };
+		4CF7946A2537D713001369BD /* PictureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF794682537D713001369BD /* PictureTableViewCell.swift */; };
+		4CF7946B2537D713001369BD /* PictureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF794692537D713001369BD /* PictureTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		4C854D8725353338003A71D5 /* nssl0033.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0033.jpg; sourceTree = "<group>"; };
 		4C854D8825353338003A71D5 /* nssl0034.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0034.jpg; sourceTree = "<group>"; };
 		4C854D942535E7C6003A71D5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4CF794682537D713001369BD /* PictureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureTableViewCell.swift; sourceTree = "<group>"; };
+		4CF794692537D713001369BD /* PictureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				4C55C2DB2535224C0004924C /* ViewController.swift */,
 				4C854D942535E7C6003A71D5 /* DetailViewController.swift */,
 				4C55C2DD2535224C0004924C /* Main.storyboard */,
+				4CF794682537D713001369BD /* PictureTableViewCell.swift */,
+				4CF794692537D713001369BD /* PictureTableViewCell.xib */,
 				4C55C2E02535224F0004924C /* Assets.xcassets */,
 				4C55C2E22535224F0004924C /* LaunchScreen.storyboard */,
 				4C55C2E52535224F0004924C /* Info.plist */,
@@ -165,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF7946B2537D713001369BD /* PictureTableViewCell.xib in Resources */,
 				4C854D8A25353339003A71D5 /* nssl0046.jpg in Resources */,
 				4C854D9125353339003A71D5 /* nssl0033.jpg in Resources */,
 				4C854D8D25353339003A71D5 /* nssl0051.jpg in Resources */,
@@ -191,6 +198,7 @@
 				4C55C2DC2535224C0004924C /* ViewController.swift in Sources */,
 				4C55C2D82535224C0004924C /* AppDelegate.swift in Sources */,
 				4C55C2DA2535224C0004924C /* SceneDelegate.swift in Sources */,
+				4CF7946A2537D713001369BD /* PictureTableViewCell.swift in Sources */,
 				4C854D952535E7C6003A71D5 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

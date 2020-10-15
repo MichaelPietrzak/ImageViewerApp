@@ -26,6 +26,9 @@ class ViewController: UITableViewController {
         }
         print(pictures)
         
+        // Register xib with the name of xib file 
+        tableView.register(UINib(nibName: "PictureTableViewCell", bundle: nil), forCellReuseIdentifier: "PictureTableViewCell")
+        
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -34,16 +37,24 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
-        cell.textLabel?.text = pictures[indexPath.row]
+        
+        // Reuse or create a cell of the appropriate type.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PictureTableViewCell", for: indexPath) as! PictureTableViewCell
+        
+        // Fetch the data for the row.
+        let thePicture = pictures[indexPath.row]
+        
+        // Configure the cell’s contents with data from the fetched object.
+        cell.pictureName?.text = thePicture
+    
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let viewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
-            viewController.selectedImage = pictures[indexPath.row]
-            navigationController?.pushViewController(viewController, animated: true)
-        }
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if let viewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+//            viewController.selectedImage = pictures[indexPath.row]
+//            navigationController?.pushViewController(viewController, animated: true)
+//        }
+//    }
 }
 
