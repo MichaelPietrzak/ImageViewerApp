@@ -33,7 +33,16 @@ class ViewController: UITableViewController {
         // Register xib with the name of xib file 
         tableView.register(UINib(nibName: "PictureTableViewCell", bundle: nil), forCellReuseIdentifier: "PictureTableViewCell")
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(recommendTapped))
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    @objc func recommendTapped() {
+        let str = "Hey great app to store and check out photos!"
+    
+    let vc = UIActivityViewController(activityItems: [str], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
